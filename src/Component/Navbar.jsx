@@ -37,16 +37,21 @@ const Navbar = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
+          
+            <li>
             <NavLink to="/addCraftItem">Add Craft Item</NavLink>
           </li>
+          
           <li>
             <NavLink to="/allArtCraft">All Art & Craft Item</NavLink>
           </li>
           
-            <li>
+            
+            
+              <li>
               <NavLink to="/myCraft">My Art & Craft List</NavLink>
             </li>
+            
 
             {/* <li>
               <NavLink to="/logIn">LogIn</NavLink>
@@ -132,6 +137,10 @@ const Navbar = () => {
                 <a id="clickable"><img src={user?.photoURL || <p>user</p>} alt="" /></a>
                 <Tooltip anchorSelect="#clickable" clickable>
                 <button> {user?.displayName || "not found"}</button>
+                <div className="mt-2 rounded-md">
+                <button onClick={logout} className="btn btn-sm bg-white">LogOut</button>
+                </div>
+
                 </Tooltip>
               </div>
             </label>
@@ -150,9 +159,9 @@ const Navbar = () => {
           <button className="btn btn-sm bg-white text-stone-800">Register</button>
         </Link>
         }
-        {
+        {/* {
           user && <button onClick={logout} className="btn btn-sm bg-white">LogOut</button>
-        }
+        } */}
         </div>
       </div>
     );

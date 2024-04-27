@@ -28,7 +28,7 @@ Art & Crafts is an expansive domain encompassing a wide range of creative activi
     
     {
       //  <h1> card : {artCrafts.length}</h1>
-       art.map(artcard => <ArtCard key={art._id} art={art} artcard={artcard} setArt={setArt}></ArtCard>)
+       art.slice(0,6).map(artcard => <ArtCard key={art._id} art={art} artcard={artcard} setArt={setArt}></ArtCard>)
      }
     </div>
   </div>
