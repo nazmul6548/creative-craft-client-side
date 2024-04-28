@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Component/AuthProvider";
+import MyCardDesign from "../Component/MyCardDesign";
 
 
 const MyCraftList = () => {
@@ -10,23 +11,26 @@ const MyCraftList = () => {
 // console.log(user);
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/addcraft/${user.email}`)
+    if (user?.email) {
+        fetch(`http://localhost:5000/artCraft/email/${user.email}`)
     .then((res)=>res.json())
     .then(data=>{
         setItem(data)
         console.log(data);
-    })
+    }) 
+    }
+   
 },[user])
 
     return (
         <div className="mt-20">
-            <h2>my craft list</h2>
+            <h1 className="text-center text-5xl font-bold pt-5 pb-5">My Art&Crafts</h1>
+            <div className="grid grid-cols-1 md:grid-cols-3  gap-10">
             {
-                item.map(p=>(
-                    <div> p
-                    </div>
-                ))
-            }
+            item.map(p=><MyCardDesign key={item._id} item={item} p={p}></MyCardDesign>)
+            
+        }
+        </div>
         </div>
     );
 };
