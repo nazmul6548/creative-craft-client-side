@@ -38,7 +38,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           
-            <li>
+            <li className="">
             <NavLink to="/addCraftItem">Add Craft Item</NavLink>
           </li>
           
@@ -48,7 +48,7 @@ const Navbar = () => {
           
             
             
-              <li>
+              <li className="bg-slate-900">
               <NavLink to="/myCraft">My Art & Craft List</NavLink>
             </li>
             
@@ -66,7 +66,7 @@ const Navbar = () => {
         </>
     )
     return loading ? (
-      <div className="flex items-center justify-center w-full h-[100vh] text-gray-900 dark:text-gray-100 dark:bg-gray-950">
+      <div className="flex items-center justify-center w-full h-[100vh] text-gray-100 ">
       <div>
         <h1 className="text-xl md:text-7xl font-bold flex items-center">
           L
@@ -107,16 +107,16 @@ const Navbar = () => {
             </svg>
           </div>
           
-            <ul tabIndex={0}  className="menu bg-slate-600 py-4 menu-sm dropdown-content mt-3 z-[2]  p-2 shadow   rounded-box w-52">
+            <ul tabIndex={0}  className="menu text-white  py-4 menu-sm dropdown-content mt-3 z-[2]  p-2 shadow   rounded-box w-52">
               
               {navlink}
             </ul>
           </div>
           
-          <a className="btn btn-ghost hidden md:block text-xl">Art & Craft</a>
+          <Link to="/" className="btn btn-ghost hidden md:block text-xl">Art & Craft</Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-zinc-50">
+        <div className="navbar-center  hidden lg:flex">
+          <ul className="menu menu-horizontal  px-1 text-zinc-50">
             {navlink}
           </ul>
         </div>
