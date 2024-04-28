@@ -1,5 +1,5 @@
 import swal from "sweetalert";
-import { ScrollRestoration } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 
 const MyCardDesign = ({p,item,setItem}) => {
     const {_id,image,short_description,stockStatus,customization,rating,price,subcategory_name,item_name}=p
@@ -58,14 +58,13 @@ const MyCardDesign = ({p,item,setItem}) => {
         <li>Stock :{stockStatus}</li>
         </div>
     
+    <Link to={`/updatecraft/${_id}`}>
     <button type="button"
       className="px-6 py-2 w-full mt-4 rounded-lg text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
-      onClick={() => {
-        // Handle click event here
-      }}
+      onClick={() => {}}
     >
       Update
-    </button>
+    </button></Link>
     <button type="button"
       className="px-6 py-2 w-full mt-4 rounded-lg text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
       onClick={() => handleDelete(_id)}

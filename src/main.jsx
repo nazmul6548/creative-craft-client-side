@@ -16,6 +16,7 @@ import  AuthProvider  from './Component/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async';
 import DetailsCart from './Pages/DetailsCart';
 import PrivateRoute from './Component/PrivateRoute';
+import Updatecraft from './Pages/Updatecraft';
 
 
 const router = createBrowserRouter([
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
         path:"/register",
         element:<Register></Register>
       },
+      {
+        path:"/updatecraft/:id",
+        element:<Updatecraft></Updatecraft>,
+        loader:({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+      }
     ]
   },
 ]);
