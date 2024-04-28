@@ -6,6 +6,7 @@ import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import ArtCard from "./ArtCard";
 import { Typewriter } from 'react-simple-typewriter';
+import NewData from "./NewData";
 const Home = () => {
     const artCrafts =useLoaderData()
     const [art,setArt]=useState(artCrafts)
@@ -60,6 +61,9 @@ const Home = () => {
             <div className="">
             <RecentNews></RecentNews>
             </div>
+            {/* <div className="grid-cols-1 md:grid-cols-3">
+            <NewData></NewData>
+            </div> */}
             <WebsiteInfo></WebsiteInfo>
             <ScrollRestoration/>
         </div>

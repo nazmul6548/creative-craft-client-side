@@ -17,6 +17,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import DetailsCart from './Pages/DetailsCart';
 import PrivateRoute from './Component/PrivateRoute';
 import Updatecraft from './Pages/Updatecraft';
+import NewData from './Component/NewData';
 
 
 const router = createBrowserRouter([
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:() => fetch('http://localhost:5000/artCraft')
+        loader:() => fetch('http://localhost:5000/artCraft'),
+        
 
       },
       {
@@ -67,6 +69,12 @@ const router = createBrowserRouter([
         path:"/updatecraft/:id",
         element:<Updatecraft></Updatecraft>,
         loader:({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+      },
+      {
+        path:"/newdata",
+        element:<NewData></NewData>,
+        loader:()=> fetch('http://localhost:5000/subCat')
+
       }
     ]
   },

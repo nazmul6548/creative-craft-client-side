@@ -55,7 +55,9 @@ const Navbar = () => {
               <NavLink to="/myCraft">My Art & Craft List</NavLink>
             </li>
              }
-            
+            {
+              <NavLink to="/newdata">newcard</NavLink>
+            }
 
             {/* <li>
               <NavLink to="/logIn">LogIn</NavLink>
