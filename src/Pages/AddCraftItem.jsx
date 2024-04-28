@@ -32,6 +32,7 @@ const AddCraftItem = () => {
         })
         .then(res => res.json())
         .then(data => {
+            // form.reset()
             console.log(data);
             if (data.acknowledged) {
                 swal({
@@ -41,7 +42,10 @@ const AddCraftItem = () => {
                   button: "Done!",
                 })
                 
-              }
+               
+                
+            }
+            
         })
     }
     return (

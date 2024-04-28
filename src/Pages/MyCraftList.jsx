@@ -6,6 +6,7 @@ import MyCardDesign from "../Component/MyCardDesign";
 const MyCraftList = () => {
     const {user}  = useContext(AuthContext)
     const [item,setItem] =useState([])
+    const [craft,setCraft]=useState(item)
     console.log(user.email);
 
 // console.log(user);
@@ -27,7 +28,7 @@ useEffect(()=>{
             <h1 className="text-center text-5xl font-bold pt-5 pb-5">My Art&Crafts</h1>
             <div className="grid grid-cols-1 md:grid-cols-3  gap-10">
             {
-            item.map(p=><MyCardDesign key={item._id} item={item} p={p}></MyCardDesign>)
+            item.map(p=><MyCardDesign key={item._id} item={item} setItem={setItem}  p={p}></MyCardDesign>)
             
         }
         </div>
