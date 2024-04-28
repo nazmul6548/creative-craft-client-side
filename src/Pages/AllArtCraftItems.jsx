@@ -1,9 +1,11 @@
 
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter';
 
 const AllArtCraftItems = () => {
     const data =useLoaderData()
+
+
     console.log(data);
     return (
         <div className="overflow-x-auto mt-20">
@@ -60,8 +62,10 @@ const AllArtCraftItems = () => {
                             {item.rating}
                         </td>
                         <td className="px-6 py-4 text-sm">
-                            <button className="px-2 py-1 text-xs font-semibold leading-tight text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Edit</button>
-                            <button className="px-2 py-1 ml-2 text-xs font-semibold leading-tight text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Delete</button>
+                          <Link to={`/detailscard/${item._id}`}>
+                          <button className="px-2 py-1 text-xs font-semibold leading-tight text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">View Details</button>
+                          </Link>
+                            {/* <button className="px-2 py-1 ml-2 text-xs font-semibold leading-tight text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Delete</button> */}
                         </td>
                     </tr>
                 </tbody>

@@ -48,7 +48,7 @@ const Navbar = () => {
           
             
             
-              <li className="bg-slate-900">
+              <li className="">
               <NavLink to="/myCraft">My Art & Craft List</NavLink>
             </li>
             
@@ -87,7 +87,7 @@ const Navbar = () => {
       </div>
     </div>
      ) : (
-        <div className="navbar bg-[#27282b] fixed top-0 shadow-lg  z-[4] ">
+        <div className="navbar bg-slate-800 fixed top-0 shadow-lg  z-[4] ">
         <div className="navbar-start   text-white ">
           <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
