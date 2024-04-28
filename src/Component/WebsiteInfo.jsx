@@ -6,9 +6,9 @@ const WebsiteInfo = () => {
       <div className="grid lg:grid-cols-2 gap-8 max-lg:max-w-2xl mx-auto">
         <div className="text-left">
           <h2 className="text-4xl font-extrabold mb-6">Welcome to Our Website</h2>
-          <p className="mb-4 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.</p>
-          <p className="mb-4 text-sm">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
-          <p className="text-sm">consectetur adipiscing elit. Duis accumsan, nunc et tempus blandit, metus mi consectetur felis turpis vitae ligula. nunc et tempus blandit, metus mi consectetur felis turpis vitae ligula.</p>
+          <p className="mb-4 text-sm">Welcome to our website, where creativity knows no bounds and artistic expression flourishes in every corner! Step into a world where imagination takes flight and handcrafted wonders come to life. Whether you're a seasoned artisan or a curious beginner, there's something magical waiting for you here.</p>
+          <p className="mb-4 text-sm">we're passionate about all things craft and design. Our mission is to inspire and empower individuals to unleash their creativity and explore the endless possibilities of paper and glass artistry. </p>
+          <p className="text-sm">Embark on an artisanal adventure with us as you dive into our carefully curated classes led by experienced instructors. Discover the joy of working with your hands as you learn new techniques</p>
           <div className="grid xl:grid-cols-3 sm:grid-cols-2 gap-8 mt-12">
             <div className="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" className="fill-green-500 shrink-0" viewBox="0 0 24 24">
