@@ -7,6 +7,7 @@ const AllArtCraftItems = () => {
     console.log(data);
     return (
         <div className="overflow-x-auto mt-20">
+            <h1 className="text-center font-bold text-5xl pt-4 pb-4 text-gray-400">All Item & Craft Items Table</h1>
         <table className="min-w-full bg-white font-[sans-serif]">
             <thead className="bg-gray-700 whitespace-nowrap">
                 <tr>
