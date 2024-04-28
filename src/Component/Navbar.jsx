@@ -38,9 +38,11 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           
-            <li className="">
-            <NavLink to="/addCraftItem">Add Craft Item</NavLink>
-          </li>
+            {
+              user && <li className="">
+              <NavLink to="/addCraftItem">Add Craft Item</NavLink>
+            </li>
+            }
           
           <li>
             <NavLink to="/allArtCraft">All Art & Craft Item</NavLink>
@@ -48,9 +50,11 @@ const Navbar = () => {
           
             
             
-              <li className="">
+             {
+              user &&  <li className="">
               <NavLink to="/myCraft">My Art & Craft List</NavLink>
             </li>
+             }
             
 
             {/* <li>

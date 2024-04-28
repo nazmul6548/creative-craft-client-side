@@ -50,6 +50,7 @@ const AddCraftItem = () => {
     }
     return (
         <div className="mt-32">
+            <h1 className="font-bold text-4xl md:text-5xl  text-center pb-4">Add Your data</h1>
               <form onSubmit={handleData} className="font-[sans-serif] m-6 max-w-4xl mx-auto">
       <div className="grid sm:grid-cols-2 gap-10 mt-6">
       <div className="relative flex items-center">
