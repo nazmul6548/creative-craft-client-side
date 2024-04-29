@@ -43,7 +43,9 @@ const Home = () => {
             <div className="">
             <RecentNews></RecentNews>
             </div>
+            <div>
             <NewData></NewData>
+            </div>
             <WebsiteInfo></WebsiteInfo>
             <ScrollRestoration/>
         </div>

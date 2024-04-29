@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 
 
 const Card = ({e}) => {
     return (
+       <Link to={`/matchdata/${e.subcategory_name}`} >
         <div className="bg-white shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-2xl font-sans overflow-hidden mx-auto mt-4">
       <img src={e.image} className="w-full rounded-2xl" alt="Hotel" />
       <div className="p-6">
-        <h3 className="text-3xl text-[#333] font-extrabold">{e.subcategory_Name}</h3>
+        <h3 className="text-3xl text-[#333] font-extrabold">{e.subcategory_name}</h3>
         <div className="mt-8 flex items-center">
         
                     <div className="flex flex-col">
@@ -20,6 +22,7 @@ const Card = ({e}) => {
         </div>
       </div>
     </div>
+       </Link>
     );
 };
 

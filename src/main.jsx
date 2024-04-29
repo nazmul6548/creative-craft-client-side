@@ -18,6 +18,7 @@ import DetailsCart from './Pages/DetailsCart';
 import PrivateRoute from './Component/PrivateRoute';
 import Updatecraft from './Pages/Updatecraft';
 import NewData from './Component/NewData';
+import MatchingData from './Pages/MatchingData';
 
 
 const router = createBrowserRouter([
@@ -71,11 +72,12 @@ const router = createBrowserRouter([
         loader:({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
       },
       {
-        path:"/newdata",
-        element:<NewData></NewData>,
-        loader:()=> fetch('http://localhost:5000/subCat')
+        path:'/matchdata/:category',
+        element:<MatchingData></MatchingData>,
+        loader:({params})=> fetch(`http://localhost:5000/artCraft/category/${params.category}`)
 
       }
+    
     ]
   },
 ]);

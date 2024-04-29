@@ -21,6 +21,7 @@ const [filteredItems, setFilteredItems] = useState([]);
         .then((res) => res.json())
         .then((data) => {
           setItem(data);
+
           console.log(data);
           setFilteredItems(data);
         });
@@ -52,7 +53,7 @@ const handleFilter = (customization) => {
         {/*  */}
         <div className="dropdown dropdown-bottom">
           <div tabIndex={0} role="button" className="btn m-1">
-            Customization by
+            Customization short by
           </div>
           <ul
             tabIndex={0}
