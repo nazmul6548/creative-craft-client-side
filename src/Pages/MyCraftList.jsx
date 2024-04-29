@@ -8,9 +8,12 @@ const MyCraftList = () => {
   const [item, setItem] = useState([]);
 //   const [short,setShort] = useState();
 //   const [value,setvalue] =useState(true)
+
+const [filteredItems, setFilteredItems] = useState([]);
+  const [customization, setCustomization] = useState(null);
   console.log(user.email);
 
-  // console.log(user);
+
 
   useEffect(() => {
     if (user?.email) {
@@ -19,6 +22,7 @@ const MyCraftList = () => {
         .then((data) => {
           setItem(data);
           console.log(data);
+          setFilteredItems(data);
         });
     }
   }, [user]);
@@ -26,17 +30,14 @@ const MyCraftList = () => {
 
 
 
-//   const handleYesButton = (item1)=>{
-//     const remaning=item.filter(user=>user.customization ==item1);
-    
-//     setShort(remaning)
-//      setvalue(false)
-//   }
-//   const handleNoButton = (item2)=>{
-// const remaning = item.filter(user=>user.customization ==item2);
-// setShort(remaning)
-// setvalue(false)
-//   }
+
+
+const handleFilter = (customization) => {
+ 
+    const filtered = item.filter((items) => items.customization === customization);
+    setFilteredItems(filtered);
+    setCustomization(customization);
+  };
 
   return (
     <div className="mt-20">
@@ -51,18 +52,21 @@ const MyCraftList = () => {
         {/*  */}
         <div className="dropdown dropdown-bottom">
           <div tabIndex={0} role="button" className="btn m-1">
-            Customization
+            Customization by
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
+            
+
             <li>
-              {/* <button onClick={handleYesButton("yes")}>yes</button> */}
+              <button onClick={() => handleFilter("yes")}>Yes</button>
             </li>
             <li>
-              {/* <button onClick={() => handleNoButton("No")} >No</button> */}
+              <button onClick={() => handleFilter("No")}>No</button>
             </li>
+            
           </ul>
         </div>
         {/*  */}
@@ -70,7 +74,7 @@ const MyCraftList = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 mt-8  gap-10">
       {
-            item.map(p=><MyCardDesign key={item._id} item={item} setItem={setItem}  p={p}></MyCardDesign>)
+            filteredItems.map(p=><MyCardDesign key={item._id}  item={item} setItem={setItem}  p={p}></MyCardDesign>)
             
         }
       </div>
