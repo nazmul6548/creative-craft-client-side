@@ -32,7 +32,7 @@ const MyCardDesign = ({p,item,setItem}) => {
               swal("Your imaginary file is safe!");
             }
 
-            const reminder = item.filter(cof=> cof._id !== _id)
+            const reminder = p.filter(cof=> cof._id !== _id)
             setItem(reminder);
            }
 
