@@ -13,14 +13,7 @@ const Home = () => {
     console.log(art);
 
         
-    const handleType = ( ) => {
-        // access word count number
-        // console.log("typing...")
-    }     
-
-      const handleDone = () => {
-        console.log(`Done after 5 loops!`)
-      }
+    
      
     return (
         <div>
@@ -36,18 +29,7 @@ const Home = () => {
 
   <div className="mt-10">
   <h1 className="text-center font-bold text-5xl pb-5"><Typewriter words={['Crafts Items']} /></h1>
-  <p className="text-center md:w-3/4 m-auto pt-4 pb-6">
-  <Typewriter
-            words={['Art & Crafts is an expansive domain', 'encompassing a wide range of creative activities, from traditional' ,'handicrafts to contemporary art forms. It involves the use of various materials,' ,'techniques, and skills to produce visually appealing and meaningful works']}
-            loop={5}
-            cursor
-            cursorStyle='_'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={2000}
-            onLoopDone={handleDone}
-            onType={handleType}
-          /></p>
+  <p className="text-center md:w-3/4 m-auto pt-4 pb-6">Art & Crafts is an expansive domain encompassing a wide range of creative activities, from traditional handicrafts to contemporary art forms. It involves the use of various materials, techniques, and skills to produce visually appealing and meaningful works</p>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     
     {
@@ -61,9 +43,7 @@ const Home = () => {
             <div className="">
             <RecentNews></RecentNews>
             </div>
-            {/* <div className="grid-cols-1 md:grid-cols-3">
             <NewData></NewData>
-            </div> */}
             <WebsiteInfo></WebsiteInfo>
             <ScrollRestoration/>
         </div>

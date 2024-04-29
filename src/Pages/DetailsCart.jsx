@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData} from "react-router-dom";
 import { ScrollRestoration } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter'
@@ -7,6 +8,9 @@ const DetailsCart = () => {
     console.log(data);
     return (
         <section className="dark:bg-gray-100 dark:text-gray-800 mt-20">
+              <Helmet>
+    <title>detailsCard</title>
+  </Helmet>
 	<div className="container flex flex-col-reverse mx-auto lg:flex-row">
 		<div className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-violet-600 dark:text-gray-50">
 			<div className="flex space-x-2 sm:space-x-4">

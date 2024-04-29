@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import swal from "sweetalert";
 
@@ -55,6 +56,9 @@ const Updatecraft = () => {
 
     return (
         <div className="mt-32">
+              <Helmet>
+    <title>updateCraft</title>
+  </Helmet>
             <h1 className="text-center font-bold text-4xl pb-4 md:text-5xl">Here You Can Update Data</h1>
               <form onSubmit={handleUpdate} className="font-[sans-serif] m-6 max-w-4xl mx-auto">
       <div className="grid sm:grid-cols-2 gap-10 mt-6">

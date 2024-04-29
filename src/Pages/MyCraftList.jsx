@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Component/AuthProvider";
 import MyCardDesign from "../Component/MyCardDesign";
+import { Helmet } from "react-helmet-async";
 
 const MyCraftList = () => {
   const { user } = useContext(AuthContext);
@@ -39,6 +40,9 @@ const MyCraftList = () => {
 
   return (
     <div className="mt-20">
+          <Helmet>
+    <title>myCraftList</title>
+  </Helmet>
       <h1 className="text-center text-5xl font-bold pt-5 pb-5">
         My Art&Crafts
       </h1>
