@@ -113,7 +113,7 @@ const Navbar = () => {
             </svg>
           </div>
           
-            <ul tabIndex={0}  className="menu text-white  py-4 menu-sm dropdown-content mt-3 z-[2]  p-2 shadow   rounded-box w-52">
+            <ul tabIndex={0}  className="menu bg-[#0c172c] text-white  py-4 menu-sm dropdown-content mt-3 z-[2]  p-2 shadow   rounded-box w-52">
               
               {navlink}
             </ul>

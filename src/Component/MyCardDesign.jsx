@@ -1,7 +1,7 @@
 import swal from "sweetalert";
 import { Link, ScrollRestoration } from "react-router-dom";
 
-const MyCardDesign = ({p,item,setItem}) => {
+const MyCardDesign = ({p,item,setItem,setFilteredItems }) => {
     const {_id,image,short_description,stockStatus,customization,rating,price,subcategory_name,item_name}=p
     const handleDelete = _id =>{
         console.log(_id);
@@ -17,7 +17,7 @@ const MyCardDesign = ({p,item,setItem}) => {
         if (willDelete) {
            
        
-            fetch(`http://localhost:5000/artCraft/${_id}`,{
+            fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/${_id}`,{
                 method: 'DELETE',
             })
             .then(res => res.json())
@@ -31,9 +31,11 @@ const MyCardDesign = ({p,item,setItem}) => {
             } else {
               swal("Your imaginary file is safe!");
             }
-
+            
             const reminder = p.filter(cof=> cof._id !== _id)
-            setItem(reminder);
+            setFilteredItems(reminder);
+           
+         
            }
 
         )
@@ -65,9 +67,9 @@ const MyCardDesign = ({p,item,setItem}) => {
     >
       Update
     </button></Link>
-    <button type="button"
+    <button onClick={() => handleDelete(_id)} type="button"
       className="px-6 py-2 w-full mt-4 rounded-lg text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
-      onClick={() => handleDelete(_id)}
+      
     >
       Delete
     </button>

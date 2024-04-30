@@ -6,8 +6,7 @@ import { Helmet } from "react-helmet-async";
 const MyCraftList = () => {
   const { user } = useContext(AuthContext);
   const [item, setItem] = useState([]);
-//   const [short,setShort] = useState();
-//   const [value,setvalue] =useState(true)
+
 
 const [filteredItems, setFilteredItems] = useState([]);
   const [customization, setCustomization] = useState(null);
@@ -17,7 +16,7 @@ const [filteredItems, setFilteredItems] = useState([]);
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/artCraft/email/${user.email}`)
+      fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/email/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setItem(data);
@@ -39,6 +38,13 @@ const handleFilter = (customization) => {
     setFilteredItems(filtered);
     setCustomization(customization);
   };
+
+
+  // const handleDeleteItem = (_id) => {
+  //   // Filter out the deleted item from the list
+  //   const updatedItems = item.filter((i) => i._id !== _id);
+  //   setItem(updatedItems);
+  // };
 
   return (
     <div className="mt-20">
@@ -75,7 +81,7 @@ const handleFilter = (customization) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 mt-8  gap-10">
       {
-            filteredItems.map(p=><MyCardDesign key={item._id}  item={item} setItem={setItem}  p={p}></MyCardDesign>)
+            filteredItems.map(p=><MyCardDesign key={item._id}   setFilteredItems={setFilteredItems} setCustomization={setCustomization} customization={customization}  item={item} setItem={setItem}  p={p}></MyCardDesign>)
             
         }
       </div>

@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:() => fetch('http://localhost:5000/artCraft'),
+        loader:() => fetch('https://art-and-craft-server-eta.vercel.app/artCraft'),
         
 
       },
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute>
           <DetailsCart></DetailsCart>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+        loader: ({ params }) => fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/${params.id}`)
           
       },
       {
@@ -51,12 +51,12 @@ const router = createBrowserRouter([
       {
         path:"/allArtCraft",
         element:<AllArtCraftItems></AllArtCraftItems>,
-        loader:() => fetch('http://localhost:5000/artCraft')
+        loader:() => fetch('https://art-and-craft-server-eta.vercel.app/artCraft')
       },
       {
         path:"/myCraft",
         element:<PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>,
-        // loader:({params}) => fetch(`http://localhost:5000/artCraft/${params.email}`)
+        // loader:({params}) => fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/${params.email}`)
       },
       {
         path:"/logIn",
@@ -69,12 +69,12 @@ const router = createBrowserRouter([
       {
         path:"/updatecraft/:id",
         element:<Updatecraft></Updatecraft>,
-        loader:({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+        loader:({params}) => fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/${params.id}`)
       },
       {
         path:'/matchdata/:category',
         element:<MatchingData></MatchingData>,
-        loader:({params})=> fetch(`http://localhost:5000/artCraft/category/${params.category}`)
+        loader:({params})=> fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/category/${params.category}`)
 
       }
     

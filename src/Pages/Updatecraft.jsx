@@ -27,7 +27,7 @@ const Updatecraft = () => {
         // const user_email=user.email;
         const result={_id,image,item_name,subcategory_name,short_description,price,rating,customization,processing_time,stockStatus,user_name,user_email}
         console.log(result);
-        fetch(`http://localhost:5000/artCraft/${_id}`,{
+        fetch(`https://art-and-craft-server-eta.vercel.app/artCraft/${_id}`,{
             method:'PUT',
             headers:{
             'content-type':'application/json'

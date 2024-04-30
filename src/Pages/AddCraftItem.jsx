@@ -24,13 +24,14 @@ const AddCraftItem = () => {
         const user_email=user.email;
         const result={image,item_name,subcategory_name,short_description,price,rating,customization,processing_time,stockStatus,user_name,user_email}
         console.log(result);
-        fetch('http://localhost:5000/artCraft',{
+        fetch('https://art-and-craft-server-eta.vercel.app/artCraft',{
             method:'POST',
             headers:{
             'content-type':'application/json'
             },
             body:JSON.stringify(result)
         })
+        
         .then(res => res.json())
         .then(data => {
             // form.reset()
@@ -42,6 +43,11 @@ const AddCraftItem = () => {
                   icon: "success",
                   button: "Done!",
                 })
+                // .then(() => {
+                
+                  e.target.reset();
+              // });
+                
                 
                
                 
