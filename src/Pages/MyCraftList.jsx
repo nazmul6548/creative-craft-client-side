@@ -81,7 +81,7 @@ const handleFilter = (customization) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 mt-8  gap-10">
       {
-            filteredItems.map(p=><MyCardDesign key={item._id}   setFilteredItems={setFilteredItems} setCustomization={setCustomization} customization={customization}  item={item} setItem={setItem}  p={p}></MyCardDesign>)
+            filteredItems.map(p=><MyCardDesign key={item._id}   setFilteredItems={setFilteredItems} filteredItems={filteredItems} setCustomization={setCustomization} customization={customization}  item={item} setItem={setItem}  p={p}></MyCardDesign>)
             
         }
       </div>

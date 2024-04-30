@@ -44,6 +44,8 @@ const Home = () => {
             <RecentNews></RecentNews>
             </div>
             <div>
+            <h1 className="text-4xl md:text-5xl text-center pb-5 font-bold">Collection Data</h1>
+            <p className="text-center w-full md:w-3/4 m-auto">Explore a world of creativity and craftsmanship with our diverse collection of art and craft items. From handmade jewelry to intricately designed ceramics, our curated selection showcases the talent and passion of artisans from around the globe. </p>
             <NewData></NewData>
             </div>
             <WebsiteInfo></WebsiteInfo>

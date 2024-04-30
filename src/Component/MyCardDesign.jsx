@@ -1,7 +1,7 @@
 import swal from "sweetalert";
 import { Link, ScrollRestoration } from "react-router-dom";
 
-const MyCardDesign = ({p,item,setItem,setFilteredItems }) => {
+const MyCardDesign = ({p,item,setItem,setFilteredItems,filteredItems }) => {
     const {_id,image,short_description,stockStatus,customization,rating,price,subcategory_name,item_name}=p
     const handleDelete = _id =>{
         console.log(_id);
@@ -32,7 +32,7 @@ const MyCardDesign = ({p,item,setItem,setFilteredItems }) => {
               swal("Your imaginary file is safe!");
             }
             
-            const reminder = p.filter(cof=> cof._id !== _id)
+            const reminder =filteredItems.filter(cof=> cof._id !== _id)
             setFilteredItems(reminder);
            
          

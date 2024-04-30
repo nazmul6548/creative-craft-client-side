@@ -23,6 +23,7 @@ const NewData = () => {
 
     return (
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10">
+          
 
             {
                 dataa.map(e=><Card key={e._id} e={e}></Card>)
