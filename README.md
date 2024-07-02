@@ -15,7 +15,7 @@
 3.Login/register buttons conditionally displayed based on user authentication status.
 4.Engaging Visuals with Slider Carousel:
 5.Immerse yourself in captivating visuals with our slider carousel feature.
-6.Explore a dynamic showcase of crafts, artworks, and creative inspirations.
+
 
 
 *Efficient Data Management and API Integration:
@@ -31,8 +31,6 @@
 1.Join a vibrant community of craft enthusiasts and artists.
 2.Collaborate, share ideas, and inspire others with your creations.
 
-*Comprehensive Footer for Quick Access:
-1.Explore additional resources and links conveniently with our comprehensive footer section.
 
 
 *npm package and technologies which i use
