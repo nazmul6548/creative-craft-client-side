@@ -7,16 +7,19 @@ import { useState } from "react";
 import ArtCard from "./ArtCard";
 import { Typewriter } from 'react-simple-typewriter';
 import NewData from "./NewData";
+import { motion, useScroll } from "framer-motion"
+// import './Home.css'
 const Home = () => {
     const artCrafts =useLoaderData()
     const [art,setArt]=useState(artCrafts)
     console.log(art);
 
-        
+    const { scrollYProgress } = useScroll()
     
      
     return (
         <div>
+        
              <Helmet>
     <title>Home</title>
   </Helmet>
@@ -40,7 +43,7 @@ const Home = () => {
   </div>
 
 
-            <div className="">
+            <div className="text-center flex justify-center">
             <RecentNews></RecentNews>
             </div>
             <div>
@@ -49,6 +52,34 @@ const Home = () => {
             <NewData></NewData>
             </div>
             <WebsiteInfo></WebsiteInfo>
+            {/* <motion.div className="fixed top-0 left-0 right-0 h-4 z-40 bg-blue-500" style={{ scaleX: scrollYProgress }} /> */}
+{/*  */}
+<div className="fixed  bottom-2 right-4 z-50">
+                <svg className="progress-ring" width="50" height="50">
+                    <circle
+                        className="progress-ring__circle-bg"
+                        stroke="lightgray"
+                        strokeWidth="4"
+                        fill="transparent"
+                        r="22"
+                        cx="25"
+                        cy="25"
+                    />
+                    <motion.circle
+                        className="progress-ring__circle"
+                        stroke="red"
+                        strokeWidth="6"
+                        fill="transparent"
+                        r="22"
+                        cx="25"
+                        cy="25"
+                        style={{
+                            pathLength: scrollYProgress,
+                        }}
+                    />
+                </svg>
+            </div>
+{/*  */}
             <ScrollRestoration/>
         </div>
     );

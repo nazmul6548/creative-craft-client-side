@@ -1,0 +1,16 @@
+.progress-ring__circle-bg,
+.progress-ring__circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dasharray 0.3s;
+}
+
+.progress-ring__circle-bg {
+    stroke-dasharray: 138.2; /* 2 * Math.PI * r (where r is 22) */
+    stroke-dashoffset: 0;
+}
+
+.progress-ring__circle {
+    stroke-dasharray: 138.2;
+    stroke-dashoffset: 138.2; /* Start fully offset */
+}

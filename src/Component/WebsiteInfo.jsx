@@ -2,7 +2,7 @@
 
 const WebsiteInfo = () => {
     return (
-        <div className="font-sans text-gray-800 bg-gray-100 px-6 py-12">
+        <div className="mt-16 font-sans text-gray-800 bg-gray-100 px-6 py-12">
       <div className="grid lg:grid-cols-2 gap-8 max-lg:max-w-2xl mx-auto">
         <div className="text-left">
           <h2 className="text-4xl font-extrabold mb-6">Welcome to Our Website</h2>
