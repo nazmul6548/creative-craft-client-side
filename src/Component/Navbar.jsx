@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from "react-tooltip";
-
+import Typewriter from 'typewriter-effect';
 
 const Navbar = () => {
   const {user,loading,logout}= useContext(AuthContext)
@@ -119,7 +119,29 @@ const Navbar = () => {
             </ul>
           </div>
           
-          <Link to="/" className="btn btn-ghost hidden text-4xl  md:block "><span className="text-secondary">Creative</span> Crafts</Link>
+          <Link to="/" className="btn btn-ghost hidden text-4xl  md:block ">
+          {/*  */}
+          
+          <Typewriter
+          options={{
+            loop: true,
+          }}
+  onInit={(typewriter) => {
+    typewriter.typeString('<span class="text-secondary">Creative</span> Crafts')
+    // <span className="">Creative</span> Crafts
+      .callFunction(() => {
+        console.log('String typed out!');
+      })
+      .pauseFor(2500)
+      .deleteAll()
+      .callFunction(() => {
+        console.log('All strings were deleted');
+      })
+      .start();
+  }}
+/>
+          {/*  */}
+          </Link>
         </div>
         <div className="navbar-center  hidden lg:flex">
           <ul className="menu menu-horizontal  px-1 text-zinc-50">

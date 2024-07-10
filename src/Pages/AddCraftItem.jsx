@@ -59,8 +59,10 @@ const AddCraftItem = () => {
         <div className="mt-32">
               <Helmet>
     <title>addcrafitem</title>
+  
   </Helmet>
             <h1 className="font-bold text-4xl md:text-5xl  text-center pb-4">Add Your data</h1>
+            
               <form onSubmit={handleData} className="font-[sans-serif] m-6 max-w-4xl mx-auto">
       <div className="grid sm:grid-cols-2 gap-10 mt-6">
       <div className="relative flex items-center">
@@ -68,6 +70,7 @@ const AddCraftItem = () => {
           <input type="text" name="image" placeholder="Enter photo url" className="px-4 py-3.5 bg-white text-black w-full text-sm border-2 border-gray-100 focus:border-blue-500 rounded outline-none" />
           
         </div>
+        
         {/* Remaining input fields and buttons */}
         <div className="relative flex items-center">
           <label className="text-[13px] bg-white text-black absolute px-2 top-[-10px] left-[18px] font-semibold">Item Name</label>
