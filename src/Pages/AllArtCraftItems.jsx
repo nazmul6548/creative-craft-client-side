@@ -9,6 +9,7 @@ const AllArtCraftItems = () => {
 
     console.log(data);
     return (
+       
         <div className="overflow-x-auto mt-20">
               <Helmet>
     <title>allArt&craft</title>
@@ -76,6 +77,7 @@ const AllArtCraftItems = () => {
             ))}
         </table>
     </div>
+    
     );
 };
 

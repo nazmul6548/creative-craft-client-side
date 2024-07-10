@@ -1,5 +1,6 @@
 import swal from "sweetalert";
 import { Link, ScrollRestoration } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const MyCardDesign = ({p,item,setItem,setFilteredItems,filteredItems }) => {
     const {_id,image,short_description,stockStatus,customization,rating,price,subcategory_name,item_name}=p
@@ -46,6 +47,12 @@ const MyCardDesign = ({p,item,setItem,setFilteredItems,filteredItems }) => {
     // 
     }
     return (
+      <motion.div
+    className="card"
+    whileHover={{ scale: 1.1 }} // কার্ডে মাউস হোভার করলে স্কেল বড় হবে
+    whileTap={{ scale: 0.9 }}   // কার্ডে ক্লিক করলে স্কেল ছোট হবে
+    transition={{ duration: 0.3 }} // ট্রানজিশন এর সময়কাল
+  >
         <div className="bg-white shadow-[0_8px_12px_-6px_rgba(0,0,0,0.2)] border p-2 w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
   <img src={image} className="w-full rounded-lg" />
   <div className="px-4 my-6 text-center">
@@ -76,8 +83,11 @@ const MyCardDesign = ({p,item,setItem,setFilteredItems,filteredItems }) => {
   </div>
   <ScrollRestoration/>
 </div>
+ 
 
+ </motion.div>
     );
+
 };
 
 export default MyCardDesign;

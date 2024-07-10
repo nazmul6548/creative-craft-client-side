@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Component/AuthProvider";
 import MyCardDesign from "../Component/MyCardDesign";
 import { Helmet } from "react-helmet-async";
-
+// import ParticlesBg from 'particles-bg'
 const MyCraftList = () => {
   const { user } = useContext(AuthContext);
   const [item, setItem] = useState([]);
@@ -47,6 +47,7 @@ const handleFilter = (customization) => {
   // };
 
   return (
+    
     <div className="mt-20">
           <Helmet>
     <title>myCraftList</title>
@@ -79,13 +80,15 @@ const handleFilter = (customization) => {
         {/*  */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-8  gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3  pb-16  gap-10">
       {
             filteredItems.map(p=><MyCardDesign key={item._id}   setFilteredItems={setFilteredItems} filteredItems={filteredItems} setCustomization={setCustomization} customization={customization}  item={item} setItem={setItem}  p={p}></MyCardDesign>)
             
         }
+        {/* <ParticlesBg type="circle" bg={true} className="min-h-full"/> */}
       </div>
     </div>
+    
   );
 };
 
