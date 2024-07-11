@@ -26,7 +26,7 @@ const Home = () => {
     <title>Home</title>
   </Helmet>
               <Fade cascade>
-              <div className="mt-20">
+              <div className="mt-0 md:mt-20">
             <Slider></Slider>
 
             </div>
