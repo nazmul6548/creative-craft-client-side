@@ -9,6 +9,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import NewData from "./NewData";
 import { motion, useScroll } from "framer-motion"
 // import './Home.css'
+import { Fade } from "react-awesome-reveal";
 const Home = () => {
     const artCrafts =useLoaderData()
     const [art,setArt]=useState(artCrafts)
@@ -18,18 +19,22 @@ const Home = () => {
     
      
     return (
+        
         <div>
         
              <Helmet>
     <title>Home</title>
   </Helmet>
+              <Fade cascade>
               <div className="mt-20">
             <Slider></Slider>
 
             </div>
+              </Fade>
           
 
 
+  <Fade cascade>
   <div className="mt-10">
   <h1 className="text-center font-bold text-5xl pb-5"><Typewriter words={['Crafts Items']} /></h1>
   <p className="text-center md:w-3/4 m-auto pt-4 pb-6">Art & Crafts is an expansive domain encompassing a wide range of creative activities, from traditional handicrafts to contemporary art forms. It involves the use of various materials, techniques, and skills to produce visually appealing and meaningful works</p>
@@ -41,16 +46,21 @@ const Home = () => {
      }
     </div>
   </div>
+  </Fade>
 
 
             <div className="text-center flex justify-center">
+            <Fade  direction="up" >
             <RecentNews></RecentNews>
+            </Fade>
             </div>
+            <Fade>
             <div>
             <h1 className="text-4xl md:text-5xl text-center pb-5 font-bold">Collection Data</h1>
             <p className="text-center w-full md:w-3/4 m-auto">Explore a world of creativity and craftsmanship with ours diverse collection of art and craft items. From handmade jewelry to intricately designed ceramics, our curated selection showcases the talent and passion of artisans from around the globe. </p>
             <NewData></NewData>
             </div>
+            </Fade>
             <WebsiteInfo></WebsiteInfo>
             {/* <motion.div className="fixed top-0 left-0 right-0 h-4 z-40 bg-blue-500" style={{ scaleX: scrollYProgress }} /> */}
 {/*  */}
@@ -83,6 +93,7 @@ const Home = () => {
             <ScrollRestoration/>
            
         </div>
+        
     );
 };
 

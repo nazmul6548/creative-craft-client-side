@@ -31,7 +31,7 @@ export default function Slider() {
         pagination={false}
         modules={[EffectCoverflow, Pagination,Autoplay,Navigation]}
         loop={true}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 4000 }}
         className="mySwiper"
       >
         <SwiperSlide>

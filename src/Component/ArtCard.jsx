@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { ScrollRestoration } from "react-router-dom";
-
+import { Fade } from "react-awesome-reveal";
 const ArtCard = ({setArt,artcard,art}) => {
     const {price,item_name,image,short_description,_id} =artcard
     return (
-        <div>
+        <Fade cascade>
+          <div>
             <div className="bg-white shadow-[0_2px_15px_-6px_rgba(0,0,0,0.2)] w-full py-6 max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
   <div className="flex items-center gap-2 px-6">
     <h3 className="text-2xl text-[#333] font-extrabold flex-1">{item_name}</h3>
@@ -25,6 +26,7 @@ const ArtCard = ({setArt,artcard,art}) => {
 </div>
 <ScrollRestoration></ScrollRestoration>
         </div>
+        </Fade>
     );
 };
 
