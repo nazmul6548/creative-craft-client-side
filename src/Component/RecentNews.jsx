@@ -1,7 +1,8 @@
-
+import { Fade } from "react-awesome-reveal";
 const RecentNews = () => {
     return (
-      <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+     
+       <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className=" flex flex-wrap">
             <div className="w-full ">
@@ -19,6 +20,7 @@ const RecentNews = () => {
             </div>
           </div>
   
+          <Fade cascade>
           <div className=" flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-10 w-full">
@@ -102,8 +104,10 @@ const RecentNews = () => {
               </div>
             </div>
           </div>
+          </Fade>
         </div>
       </section>
+     
     );
   };
   

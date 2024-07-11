@@ -50,7 +50,7 @@ const Home = () => {
 
 
             <div className="text-center flex justify-center">
-            <Fade  direction="up" >
+            <Fade cascade >
             <RecentNews></RecentNews>
             </Fade>
             </div>
